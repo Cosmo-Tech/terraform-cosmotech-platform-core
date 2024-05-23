@@ -468,6 +468,7 @@ variable "loki_max_entries_limet_per_query" {
   default = 50000
 }
 
-variable "kube_config" {
-  type = string
+variable "kubeconfig_path" {
+  type        = string
+  description = "The path to the local kubeconfig file to use"
 }

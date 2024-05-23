@@ -38,9 +38,6 @@ variable "api_dns_name" {
   type = string
 }
 
-variable "kube_config" {
-}
-
 variable "certificate_cert_content" {
 }
 
@@ -74,4 +71,9 @@ variable "helm_chart" {
 variable "loki_max_entries_limet_per_query" {
   type    = number
   default = 50000
+}
+
+variable "kubeconfig_path" {
+  type    = string
+  description = "The path to the local kubeconfig file to use"
 }
