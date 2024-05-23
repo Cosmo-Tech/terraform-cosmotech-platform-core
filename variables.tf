@@ -16,21 +16,6 @@ variable "location" {
   default     = "West Europe"
 }
 
-variable "project_name" {
-  description = "The project name"
-  type        = string
-}
-
-variable "network_client_id" {
-  type    = string
-  default = ""
-}
-
-variable "network_client_secret" {
-  type    = string
-  default = ""
-}
-
 variable "fqdn" {
   type    = string
   default = ""
@@ -130,17 +115,6 @@ variable "publicip_new_or_existing_or_none" {
   default = "new"
 }
 
-
-variable "client_id" {
-  type        = string
-  description = "The client id"
-}
-
-variable "client_secret" {
-  type        = string
-  description = "The client secret"
-}
-
 variable "vnet_name" {
   type    = string
   default = ""
@@ -191,11 +165,6 @@ variable "private_dns_name_eventhub" {
 variable "private_dns_name_adt" {
   type    = string
   default = "privatelink.digitaltwins.azure.net"
-}
-
-variable "owner_list" {
-  description = "List of mail addresses for App Registration owners"
-  type        = list(string)
 }
 
 # ARM deployment mode
@@ -500,10 +469,5 @@ variable "loki_max_entries_limet_per_query" {
 }
 
 variable "kube_config" {
-  type = list(object({
-    host                   = string
-    client_certificate     = string
-    client_key             = string
-    cluster_ca_certificate = string
-  }))
+  type = string
 }
