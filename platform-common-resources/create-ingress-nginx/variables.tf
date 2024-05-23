@@ -23,19 +23,7 @@ variable "monitoring_namespace" {
   default = "cosmotech-monitoring"
 }
 
-variable "loadbalancer_ip" {
-  type = string
-}
-
 variable "tls_secret_name" {
   type = string
 }
 
-variable "publicip_resource_group" {
-  type = string
-}
-
-variable "is_bare_metal" {
-  type    = bool
-  default = true
-}

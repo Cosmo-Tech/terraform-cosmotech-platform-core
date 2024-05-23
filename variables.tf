@@ -130,10 +130,6 @@ variable "publicip_new_or_existing_or_none" {
   default = "new"
 }
 
-variable "publicip_resource_group" {
-  type    = string
-  default = ""
-}
 
 variable "client_id" {
   type        = string
@@ -207,20 +203,6 @@ variable "network_sp_object_id" {
   type        = string
   description = "The ID of the existing Network's service principal"
   default     = ""
-}
-
-variable "loadbalancer_ip" {
-  type    = string
-  default = ""
-}
-
-variable "subscription_id" {
-  description = "The subscription id"
-  type        = string
-}
-
-variable "tenant_id" {
-  type = string
 }
 
 variable "resource_group" {

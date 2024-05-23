@@ -1,24 +1,3 @@
-variable "client_id" {
-  type        = string
-  description = "The client id of the app registration used to build this"
-  default     = ""
-}
-
-variable "client_secret" {
-  type        = string
-  description = "The client secret of the app registration used to build this"
-  default     = ""
-}
-
-variable "subscription_id" {
-  type        = string
-  description = "The subscription id"
-}
-
-variable "tenant_id" {
-  type        = string
-  description = "The tenant id"
-}
 
 variable "cluster_issuer_email" {
   type = string
@@ -55,19 +34,7 @@ variable "create_prometheus_stack" {
   type = bool
 }
 
-variable "publicip_resource_group" {
-  type = string
-}
-
 variable "api_dns_name" {
-  type = string
-}
-
-variable "resource_group" {
-  type = string
-}
-
-variable "loadbalancer_ip" {
   type = string
 }
 
