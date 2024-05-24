@@ -33,9 +33,9 @@ resource "helm_release" "prometheus-stack" {
   timeout      = 600
   reuse_values = true
 
-  values = [
-    templatefile("${path.module}/values.yaml", local.values_prometheus_stack)
-  ]
+  # values = [
+  #   templatefile("${path.module}/values.yaml", local.values_prometheus_stack)
+  # ]
 }
 
 # Experimental: gives helm time to finish cleaning up.
