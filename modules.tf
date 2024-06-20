@@ -60,3 +60,8 @@ module "loki" {
   provisioner                          = var.provisioner
   resources                            = var.resources
 }
+
+module "storage" {
+  source = "./create-storage"
+  longhorn_version = var.longhorn_version
+}
